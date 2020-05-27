@@ -1,0 +1,40 @@
+.league {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.league__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.league__rounds-and-progress-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.league__rounds {
+  width: 40%;
+  min-width: 300px;
+  margin: 0 auto 20px;
+}
+
+.league__round {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.league__progress {
+  width: 40%;
+  min-width: 300px;
+  margin: 0 auto 20px;
+}

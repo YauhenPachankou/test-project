@@ -1,0 +1,35 @@
+.round {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.round__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 30px;
+}
+
+.round__players {
+  width: 100%;
+}
+
+.round__player-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.round__player {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+}
+
+.round__player-divider {
+  margin: 20px 0;
+}

@@ -1,0 +1,21 @@
+<div class="league">
+  <mat-card class="league__header">
+    <mat-card-title class="league__title">{{league.title}}</mat-card-title>
+    <mat-card-subtitle class="league__subtitle">Drop Out contest</mat-card-subtitle>
+  </mat-card>
+
+  <div class="league__rounds-and-progress-wrapper">
+    <div class="league__rounds">
+      <app-round
+        class="league__round"
+        *ngFor="let round of league.rounds | sortRounds"
+        [round]="round"
+      >
+      </app-round>
+    </div>
+
+    <app-progress
+      class="league__progress"
+    ></app-progress>
+  </div>
+</div>
