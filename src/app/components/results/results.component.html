@@ -1,0 +1,33 @@
+<div class="results">
+  <a [routerLink]="['/standings']" mat-button color="accent">Back to standings</a>
+
+  <div class="results__navigation">
+    <a mat-button color="primary" (click)="redirectToPreviousRound()" [disabled]="currentRound <= 1">Previous round</a>
+    <a mat-button color="primary" (click)="redirectToNextRound()" [disabled]="currentRound >= roundsCount">Next round</a>
+  </div>
+
+  <mat-table [dataSource]="dataSource" class="results__table">
+    <ng-container matColumnDef="date">
+      <mat-header-cell *matHeaderCellDef>Date</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element['date']}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="homeTeam">
+      <mat-header-cell *matHeaderCellDef>Home team</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element['homeTeam']}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="awayTeam">
+      <mat-header-cell *matHeaderCellDef>Away team</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element['awayTeam']}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="result">
+      <mat-header-cell *matHeaderCellDef>Result</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element['result']}}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>

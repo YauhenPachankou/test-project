@@ -1,1 +1,10 @@
-<mat-card class="progress">Simple card</mat-card>
+<mat-card class="progress">
+  <mat-card class="progress__title">Progress</mat-card>
+
+  <div class="progress__round" *ngFor="let round of leagueDataService.leagueData.rounds">
+    <p>Round #{{round.id}}</p>
+    <span>{{round.players.length}}</span>
+    <span class="progress__players-in">{{round.nextRoundCount}}</span>
+    <span class="progress__players-out">{{round.players.length - round.nextRoundCount}}</span>
+  </div>
+</mat-card>

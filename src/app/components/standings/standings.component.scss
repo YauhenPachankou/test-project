@@ -1,0 +1,24 @@
+.standings {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+.standings__rounds {
+  width: 40vw;
+  min-width: 300px;
+  margin: 0 auto 20px;
+}
+
+.standings__round {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.standings__progress {
+  width: 40vw;
+  min-width: 300px;
+  margin: 0 auto 20px;
+}

@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { Round } from '../../models/league.model';
 
 @Component({
@@ -6,12 +8,14 @@ import { Round } from '../../models/league.model';
   templateUrl: './round.component.html',
   styleUrls: ['./round.component.scss']
 })
-export class RoundComponent implements OnInit {
+export class RoundComponent {
+
   @Input() public round: Round;
 
-  constructor() { }
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {
+  public goToResultsPage() {
+    this.router.navigate(['/results', this.round.id])
   }
 
 }

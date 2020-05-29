@@ -1,7 +1,11 @@
 <mat-card class="round">
   <mat-card class="round__header">
     <mat-card-title>
-      <button mat-button color="primary">Round #{{round.id}}</button>
+      <button
+        mat-button
+        color="primary"
+        (click)="goToResultsPage()"
+      >Round #{{round.id}}</button>
     </mat-card-title>
     <mat-card-subtitle>{{round.players.length}} players</mat-card-subtitle>
   </mat-card>
@@ -11,11 +15,12 @@
       class="round__player-list"
       role="listitem"
       *ngFor="let player of round.players | sortPlayers; let idx=index"
-      [appPlayerStatus]="round.nextRoundCount && idx >= round.nextRoundCount"
     >
       <div class="round__player">
         <span>{{idx + 1}}</span>
-        <p>{{player.name}}</p>
+        <p
+          [appPlayerStatus]="round.nextRoundCount && idx >= round.nextRoundCount"
+        >{{player.name}}</p>
         <span>{{player.points}}</span>
       </div>
       <mat-divider class="round__player-divider" *ngIf="idx+1 === round.nextRoundCount"></mat-divider>

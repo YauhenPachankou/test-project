@@ -5,6 +5,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTableModule } from '@angular/material/table';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,8 @@ import { ProgressComponent } from './components/progress/progress.component';
 import { SortPlayersPipe } from './pipes/sort-players.pipe';
 import { SortRoundsPipe } from './pipes/sort-rounds.pipe';
 import { PlayerStatusDirective } from './directives/player-status.directive';
+import { ResultsComponent } from './components/results/results.component';
+import { StandingsComponent } from './components/standings/standings.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,8 @@ import { PlayerStatusDirective } from './directives/player-status.directive';
     SortPlayersPipe,
     SortRoundsPipe,
     PlayerStatusDirective,
+    ResultsComponent,
+    StandingsComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +38,8 @@ import { PlayerStatusDirective } from './directives/player-status.directive';
     MatCardModule,
     MatListModule,
     MatDividerModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

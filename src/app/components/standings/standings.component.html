@@ -1,0 +1,11 @@
+<div class="standings">
+  <div class="standings__rounds">
+    <app-round
+      class="standings__round"
+      *ngFor="let round of leagueDataService.leagueData.rounds | sortRounds"
+      [round]="round"
+    ></app-round>
+  </div>
+
+  <app-progress class="standings__progress"></app-progress>
+</div>
